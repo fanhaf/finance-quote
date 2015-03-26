@@ -71,8 +71,8 @@ sub stooq_stocks {
     chomp($line);
     # Format:
     # Trade Date, Name, Trade Time,Open, Max,Min,Price,Volume,Unknown
-    # 20101229,"TAURONPE","142635",6.77,6.77,6.69,6.71,578233,0
-    my ($date, $name, $time, $open, $high, $low, $last, $volume, $hmm) = split ',', $line;
+    # GPW,20150326,170000,49.83,49.83,49.16,49.55,29729,0
+    my ($name, $date, $time, $open, $high, $low, $last, $volume, $hmm) = split ',', $line;
     utf8::encode($name);
     #if (grep {$_ eq $name} @symbols) {
     unless ($date eq "N/A") {
